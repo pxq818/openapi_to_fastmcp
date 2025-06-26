@@ -1,0 +1,213 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "FSSTHJJ",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "智慧蓝天项目"
+    },
+    {
+      "name": "智慧蓝天项目/AI接口"
+    }
+  ],
+  "paths": {
+    "/report/vocsZlDataForAI/getVocsZlStatistics": {
+      "get": {
+        "summary": "AI用的Vocs行业治理统计",
+        "deprecated": false,
+        "description": "",
+        "tags": [
+          "智慧蓝天项目/AI接口"
+        ],
+        "parameters": [
+          {
+            "name": "satoken",
+            "in": "cookie",
+            "description": "",
+            "required": false,
+            "example": "827560b9afe04fe0817955e95df41ecc",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "1",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "400",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "enterName",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "industryNames",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "336金属表面处理及热处理加工(金属表面喷涂)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "regionCode",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": [
+              ""
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "querystarttime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "2024-01-01",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queryendtime",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "2025-05-07",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/report/vocsZlDataForAI/getList": {
+      "get": {
+        "summary": "AI用的Vocs行业治理 明细",
+        "deprecated": false,
+        "description": "",
+        "tags": [
+          "智慧蓝天项目/AI接口"
+        ],
+        "parameters": [
+          {
+            "name": "satoken",
+            "in": "cookie",
+            "description": "",
+            "required": false,
+            "example": "827560b9afe04fe0817955e95df41ecc",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "areaCode",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": [
+              "440607000000"
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "industryType",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": "paintInk",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "servers": [
+    {
+      "url": "http://27.36.118.5:21100",
+      "description": "FSSTHJJ API服务器"
+    }
+  ],
+  "security": []
+}
