@@ -17,7 +17,22 @@
 
 ## 使用方法
 
-1. 确保已安装所需依赖：
+### 1. 创建并激活虚拟环境
 
 ```bash
-pip install fastmcp httpx
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+### 2. 安装依赖
+
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+```
+
+### 3. 运行程序
+
+```bash
+python convert_openapi_to_fastmcp.py
+```
+
