@@ -5,110 +5,15 @@
     "description": "",
     "version": "1.0.0"
   },
-  "tags": [
-    {
-      "name": "智慧蓝天项目"
-    },
-    {
-      "name": "智慧蓝天项目/AI接口"
-    }
-  ],
+  "tags": [],
   "paths": {
     "/report/vocsZlDataForAI/getVocsZlStatistics": {
       "get": {
         "summary": "AI用的Vocs行业治理统计",
         "deprecated": false,
         "description": "",
-        "tags": [
-          "智慧蓝天项目/AI接口"
-        ],
-        "parameters": [
-          {
-            "name": "satoken",
-            "in": "cookie",
-            "description": "",
-            "required": false,
-            "example": "827560b9afe04fe0817955e95df41ecc",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "current",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": "1",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "size",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": "400",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "enterName",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": "",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "industryNames",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": "336金属表面处理及热处理加工(金属表面喷涂)",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "regionCode",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": [
-              ""
-            ],
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "querystarttime",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": "2024-01-01",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "queryendtime",
-            "in": "query",
-            "description": "",
-            "required": false,
-            "example": "2025-05-07",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "tags": [],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "",
@@ -116,7 +21,105 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "wc2023": {
+                      "type": "integer",
+                      "description": "2023 年 - 2024 年已完成治理的企业数量（家）"
+                    },
+                    "ndzz2025": {
+                      "type": "integer",
+                      "description": "2025 年年度整治任务数（家）"
+                    },
+                    "wczz2025": {
+                      "type": "integer",
+                      "description": "2025 年已完成整治的企业数量（家）"
+                    },
+                    "ttzc": {
+                      "type": "integer",
+                      "description": "已完成淘汰转产的企业数量（家）"
+                    },
+                    "dhfxwltd": {
+                      "type": "integer",
+                      "description": "已完成低挥发性物料替代的企业数量（家）"
+                    },
+                    "ryjjfz": {
+                      "type": "integer",
+                      "description": "已实现入园集聚发展的企业数量（家）"
+                    },
+                    "gxzl": {
+                      "type": "integer",
+                      "description": "已通过高效治理评估的企业数量（家）"
+                    },
+                    "hxtxfgy": {
+                      "type": "integer",
+                      "description": "已完成活性炭吸附工艺改造提升的企业数量（家）"
+                    },
+                    "jchxtss": {
+                      "type": "integer",
+                      "description": "已建成活性炭设施的企业数量（家）"
+                    },
+                    "wacgxzl": {
+                      "type": "integer",
+                      "description": "未完成整治的企业数量（家）"
+                    },
+                    "jcgxsswtgpg": {
+                      "type": "integer",
+                      "description": "建成高效设施但未通过评估的企业数量（家）"
+                    },
+                    "jcgxsswkzpg": {
+                      "type": "integer",
+                      "description": "建成高效设施但未开展评估的企业数量（家）"
+                    },
+                    "jhtrzsc": {
+                      "type": "integer",
+                      "description": "计划淘汰转产但仍在正常生产的企业数量（家）"
+                    },
+                    "jhdhfxtdwwc": {
+                      "type": "integer",
+                      "description": "计划低挥发性物料替代但仍未完成替代的企业数量（家）"
+                    },
+                    "jhrywjj": {
+                      "type": "integer",
+                      "description": "计划入园集聚但仍未集聚的企业数量（家）"
+                    },
+                    "jhgxzlwwc": {
+                      "type": "integer",
+                      "description": "计划实施高效治理但仍未完成提升的企业数量（家）"
+                    },
+                    "tsgzsg": {
+                      "type": "integer",
+                      "description": "正在进行提升改造施工（含签订合同）的企业数量（家）"
+                    },
+                    "qdfa": {
+                      "type": "integer",
+                      "description": "已确定方案但尚未签订提升改造合同的企业数量（家）"
+                    },
+                    "rwqdfa": {
+                      "type": "integer",
+                      "description": "仍未确定提升改造方案的企业数量（家）"
+                    }
+                  },
+                  "required": [
+                    "wc2023",
+                    "ndzz2025",
+                    "wczz2025",
+                    "ttzc",
+                    "dhfxwltd",
+                    "ryjjfz",
+                    "gxzl",
+                    "hxtxfgy",
+                    "jchxtss",
+                    "wacgxzl",
+                    "jcgxsswtgpg",
+                    "jcgxsswkzpg",
+                    "jhtrzsc",
+                    "jhdhfxtdwwc",
+                    "jhrywjj",
+                    "jhgxzlwwc",
+                    "tsgzsg",
+                    "qdfa",
+                    "rwqdfa"
+                  ]
                 }
               }
             },
@@ -128,27 +131,15 @@
     },
     "/report/vocsZlDataForAI/getList": {
       "get": {
-        "summary": "AI用的Vocs行业治理 明细",
+        "summary": "AI用的Vocs行业治理明细",
         "deprecated": false,
         "description": "",
-        "tags": [
-          "智慧蓝天项目/AI接口"
-        ],
+        "tags": [],
         "parameters": [
-          {
-            "name": "satoken",
-            "in": "cookie",
-            "description": "",
-            "required": false,
-            "example": "827560b9afe04fe0817955e95df41ecc",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "name",
             "in": "query",
-            "description": "",
+            "description": "企业名称，支持模糊查询",
             "required": false,
             "example": "",
             "schema": {
@@ -158,8 +149,8 @@
           {
             "name": "areaCode",
             "in": "query",
-            "description": "",
-            "required": false,
+            "description": "行政区编码 ",
+            "required": true,
             "example": [
               "440607000000"
             ],
@@ -173,8 +164,8 @@
           {
             "name": "industryType",
             "in": "query",
-            "description": "",
-            "required": false,
+            "description": "行业治理大类",
+            "required": true,
             "example": "paintInk",
             "schema": {
               "type": "string"
@@ -188,7 +179,192 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "企业记录唯一标识，系统自动生成"
+                    },
+                    "areaName": {
+                      "type": "string",
+                      "description": "企业所在行政区名称"
+                    },
+                    "areaCode": {
+                      "type": "string",
+                      "description": "行政区编码"
+                    },
+                    "townshipName": {
+                      "type": "string",
+                      "description": "企业所在镇街名称"
+                    },
+                    "townshipCode": {
+                      "type": "string",
+                      "description": "镇街编码"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "企业全称"
+                    },
+                    "address": {
+                      "type": "string",
+                      "description": "企业详细地址"
+                    },
+                    "industryType": {
+                      "type": "string",
+                      "description": "行业治理大类"
+                    },
+                    "tradeName": {
+                      "type": "string",
+                      "description": "企业所属细分行业"
+                    },
+                    "category1": {
+                      "type": "string",
+                      "description": "设备信息分类 1，根据行业不同含义不同。1 - 面漆喷枪数 / 2 - 印刷机数 / 3 - 反应釜数 / 4-1 - 氟碳喷涂线数 / 4-2 - 喷漆线 / 5 - 凹版或凸版 / 6 - 人造石生产线"
+                    },
+                    "category2": {
+                      "type": "string",
+                      "description": "设备信息分类 2，根据行业不同含义不同。1 - 底漆喷枪数 / 2 - 覆膜机数 / 3 - 研磨机数 / 4-1 - 粉末喷涂线 / 4-2 - 喷粉线 / 5 - 使用水性或油性"
+                    },
+                    "hasCraft": {
+                      "type": "string",
+                      "description": "（2 - 包装印刷业）是否有凹版印刷或覆膜工艺"
+                    },
+                    "printTin": {
+                      "type": "string",
+                      "description": "（2 - 包装印刷业）是否印铁制罐"
+                    },
+                    "reactionNum": {
+                      "type": "string",
+                      "description": "反应釜数量（适用于化工行业）",
+                      "nullable": true
+                    },
+                    "grindNum": {
+                      "type": "string",
+                      "description": "研磨机数量（适用于化工行业）"
+                    },
+                    "sprayNum": {
+                      "type": "string",
+                      "description": "底漆喷枪数量（适用于喷涂行业）"
+                    },
+                    "surfSprayNum": {
+                      "type": "string",
+                      "description": "面漆喷枪数量（适用于喷涂行业）"
+                    },
+                    "improvement": {
+                      "type": "string",
+                      "description": "2021 年后治理提升技术工艺或存在的主要问题"
+                    },
+                    "regulation": {
+                      "type": "string",
+                      "description": "拟采取的综合整治措施"
+                    },
+                    "progress": {
+                      "type": "string",
+                      "description": "规范化治理进展情况"
+                    },
+                    "cleanMethod": {
+                      "type": "string",
+                      "description": "完成治理的方式"
+                    },
+                    "outsourceName": {
+                      "type": "string",
+                      "description": "第三方治理公司名称",
+                      "nullable": true
+                    },
+                    "companyAttitude": {
+                      "type": "string",
+                      "description": "企业对治理工作的态度"
+                    },
+                    "followPlan": {
+                      "type": "string",
+                      "description": "治理进度滞后企业的下一步跟进计划",
+                      "nullable": true
+                    },
+                    "timeLimit": {
+                      "type": "string",
+                      "description": "治理进度滞后企业要求完成签定合同时限，格式：yyyy-MM-dd"
+                    },
+                    "evaluation": {
+                      "type": "string",
+                      "description": "高效治理设施现场评估情况"
+                    },
+                    "mainProblem": {
+                      "type": "string",
+                      "description": "评估发现的主要问题"
+                    },
+                    "safetyCheck": {
+                      "type": "string",
+                      "description": "安全生产措施落实情况检查结果"
+                    },
+                    "internetConnection": {
+                      "type": "string",
+                      "description": "高效治理企业接入市物联网平台情况"
+                    },
+                    "staff": {
+                      "type": "string",
+                      "description": "现场评估人员姓名，多个用逗号分隔"
+                    },
+                    "remark": {
+                      "type": "string",
+                      "description": "备注信息"
+                    },
+                    "finishTime": {
+                      "type": "string",
+                      "description": "治理完成时间，格式：yyyy-MM"
+                    },
+                    "mainProblemList": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "nullable": true
+                      },
+                      "description": "评估主要问题列表（数组形式）"
+                    },
+                    "connectedToPlatform": {
+                      "type": "string",
+                      "description": "高效治理设施是否接入平台（是 / 否）"
+                    },
+                    "monitoringHole": {
+                      "type": "string",
+                      "description": "有机废气经沸石转轮吸附后是否开有监测孔（是 / 否）"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "areaName",
+                    "areaCode",
+                    "townshipName",
+                    "townshipCode",
+                    "name",
+                    "address",
+                    "industryType",
+                    "tradeName",
+                    "category2",
+                    "hasCraft",
+                    "printTin",
+                    "reactionNum",
+                    "grindNum",
+                    "sprayNum",
+                    "surfSprayNum",
+                    "improvement",
+                    "regulation",
+                    "progress",
+                    "cleanMethod",
+                    "outsourceName",
+                    "companyAttitude",
+                    "followPlan",
+                    "timeLimit",
+                    "evaluation",
+                    "mainProblem",
+                    "safetyCheck",
+                    "internetConnection",
+                    "staff",
+                    "remark",
+                    "finishTime",
+                    "mainProblemList",
+                    "connectedToPlatform",
+                    "monitoringHole",
+                    "category1"
+                  ]
                 }
               }
             },
@@ -203,11 +379,6 @@
     "schemas": {},
     "securitySchemes": {}
   },
-  "servers": [
-    {
-      "url": "http://27.36.118.5:21100",
-      "description": "FSSTHJJ API服务器"
-    }
-  ],
+  "servers": [],
   "security": []
 }
