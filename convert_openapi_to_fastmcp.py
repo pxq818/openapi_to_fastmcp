@@ -29,7 +29,7 @@ def create_route_maps() -> List[RouteMap]:
     """
     return [
         # GET请求映射为资源
-        RouteMap(methods=["GET"], mcp_type=MCPType.RESOURCE),
+        # RouteMap(methods=["GET"], mcp_type=MCPType.RESOURCE),
         # 其他请求映射为工具
         RouteMap(mcp_type=MCPType.TOOL),
     ]
@@ -82,8 +82,8 @@ def convert_openapi_to_fastmcp(openapi_file: str, base_url: str = "http://localh
         # 创建FastMCP服务
         fastmcp_server = FastMCP.from_openapi(
             openapi_spec=openapi_spec,
-            client=client
-            # route_maps=route_maps
+            client=client,
+            route_maps=route_maps
             # route_map_fn=custom_route_map_fn,
             # 可选：自定义组件名称
             # mcp_names={},
